@@ -21,16 +21,29 @@
             padding: 0;
         }
 
-        header {
-            background-color: var(--brookline-blue);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
+        /* Banner Styling */
+        .banner-container {
+            width: 100%;
+            height: 350px; /* Adjust height as needed */
+            overflow: hidden;
             border-bottom: 5px solid var(--accent-gold);
         }
 
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This keeps the wide aspect ratio looking sharp */
+        }
+
+        header {
+            background-color: var(--brookline-blue);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 0 20px;
         }
@@ -51,8 +64,8 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
         }
 
         .category-card {
@@ -61,6 +74,18 @@
             border-radius: 8px;
             border-top: 5px solid var(--brookline-blue);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden; /* Clears the float */
+        }
+
+        /* Image wrapping logic */
+        .card-thumb {
+            float: right;
+            width: 33%;
+            max-width: 150px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
         }
 
         .category-card h3 {
@@ -70,10 +95,11 @@
 
         .clue-list {
             padding-left: 20px;
+            margin: 0;
         }
 
         .clue-list li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .token-info {
@@ -97,23 +123,13 @@
             font-size: 0.9rem;
             color: #666;
         }
-
-        .btn {
-            display: inline-block;
-            background: var(--brookline-blue);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background: #004a94;
-        }
     </style>
 </head>
 <body>
+
+<div class="banner-container">
+    <img src="pics/Coolidge-Corner-5-630a0a19c5b12.jpg" alt="Image source: https://www.boston.com/real-estate/spring-house-hunt/2018/04/19/coolidge-corner/" class="banner-image">
+</div>
 
 <header>
     <h1>The Brookline Scavenger Hunt</h1>
@@ -125,74 +141,76 @@
     <section class="setup-section">
         <h2>How to Play</h2>
         <p><strong>Rules:</strong> Do it whenever, at your leisure, with any size group you wish. It's untimed and no sweat!</p>
-        
         <div class="token-info">
-            <strong>The Reward:</strong> Complete a category to win a <strong>unique-in-the-world token</strong> (specifically designed for this hunt with a hole for a necklace string). Finish all four to become a Brookline Legend!
+            <strong>The Reward:</strong> Complete a category to win a <strong>unique-in-the-world token</strong>. Finish all four to become a Brookline Legend!
         </div>
-
-        <p><strong>How to Submit:</strong> Send photos, videos, or links to a shared folder to <a href="mailto:nsmader@gmail.com">nsmader@gmail.com</a>. We judge "easy-breezy"—we just want to see the spirit of the clue captured!</p>
+        <p><strong>Submissions:</strong> Send proof to <a href="mailto:nsmader@gmail.com">nsmader@gmail.com</a>.</p>
     </section>
 
     <div class="grid-container">
+        
         <div class="category-card">
+            <img src="pics/a7c7ec9d-30e1-487a-a9a9-68cfa8a002d6.webp" alt="Image source: https://buildingsofnewengland.com/2025/12/06/brookline-public-library-1910/" class="card-thumb">
             <h3>📍 Places</h3>
             <ul class="clue-list">
-                <li>Take pictures of the <strong>Boston Skyline</strong> from 3 different spots in Brookline.</li>
-                <li>Find the location for What3Words: <code style="background:#eee; padding:2px 5px;">bond.grant.herb</code>.</li>
-                <li>Visit every <strong>Elementary School</strong> and pose as their mascot.</li>
-                <li>Find the final resting place of <strong>Mary Boyleston</strong> (b. 1648).</li>
-                <li>Find the Brookline "path" with the <strong>most steps</strong>; take a team photo at the top.</li>
-                <li>Find where Bach's <em>Toccata in C</em> was performed on Feb 16, 1900.</li>
+                <li>3 <strong>Skyline</strong> photos from Brookline.</li>
+                <li>What3Words location: <code>Bond.grant.herb</code>.</li>
+                <li>Visit every <strong>Elementary School</strong> acting as their mascot.</li>
+                <li>Resting place of <strong>Mary Boyleston</strong> (b. 1648).</li>
+                <li>Most total <strong>steps</strong> on a Brookline path.</li>
+                <li>1900 Bach performance site (Toccata in C).</li>
             </ul>
         </div>
 
         <div class="category-card">
+            <img src="pics/Brookline Reservoir Trees.png" alt="Image source: https://www.brooklinema.gov/1408/Brookline-Reservoir-Park" class="card-thumb">
             <h3>🌳 Nature</h3>
             <ul class="clue-list">
-                <li>Identify and photograph these trees: <strong>American Sycamore, Linden, and Cypress</strong>.</li>
-                <li>Find a 2-foot square patch with <strong>5 different species</strong> visible at once.</li>
-                <li>Photobomb a <strong>Brookline Turkey</strong> (safely!).</li>
-                <li>Document the entire length of the <strong>Emerald Necklace</strong> within town limits.</li>
-                <li>Paint or draw a still-life of vegetables from <strong>Allandale Farm</strong>.</li>
+                <li>Find: <strong>American Sycamore, Linden, and Cypress</strong>.</li>
+                <li>2-foot patch with <strong>5 species</strong> at once.</li>
+                <li>The <strong>Brookline Turkey</strong> photobomb.</li>
+                <li>Distance of the <strong>Emerald Necklace</strong> in town.</li>
+                <li>Still-life of <strong>Allandale Farm</strong> veggies.</li>
             </ul>
         </div>
 
         <div class="category-card">
+            <img src="pics/KateKotlyar-BrooklineDay-09142025-01-scaled.jpg" alt="Image source: https://brookline.news/photos-brookline-day-fills-harvard-street-with-crowds-and-fun/" class="card-thumb">
             <h3>👥 People</h3>
             <ul class="clue-list">
-                <li>Find a Brookline resident with a team member's first name and the last name <strong>Schwartz, Johnson, Patel, Rivera, or Lee</strong>. Give them a gift!</li>
-                <li>Spell a word using <strong>human bodies</strong> on a grassy field.</li>
-                <li>Bring a baked treat to the <strong>Brookline Select Board</strong>.</li>
-                <li>Conduct a 2-question survey with 10 locals and <strong>chart the results</strong>.</li>
-                <li>Introduce yourself to a Barista, Construction Worker, Crossing Guard, Librarian, Spiritual Leader, and a Puppeteer. Ask for a local recommendation!</li>
+                <li>Find a name match: <strong>Schwartz, Johnson, Patel, Rivera, or Lee</strong>.</li>
+                <li><strong>Body Spelling</strong> on a Brookline field.</li>
+                <li>Treats for the <strong>Select Board</strong>.</li>
+                <li>10-person <strong>survey & chart</strong>.</li>
+                <li>Meet: Barista, Construction Worker, Crossing Guard, Librarian, Leader, and Puppeteer.</li>
             </ul>
         </div>
 
         <div class="category-card">
+            <img src="pics/Brookline Dances.jpg" alt="Image source: https://www.brooklinema.gov/3818/Lets-Dance-Brookline" class="card-thumb">
             <h3>🎨 Activities & Things</h3>
             <ul class="clue-list">
-                <li><strong>Design a flag</strong> for Brookline (think simple and symbolic).</li>
-                <li>Build a model of Brookline architecture using <strong>food</strong>.</li>
-                <li>Create a 1-minute <strong>choreographed video</strong> or stop-motion clip about a Brookline fact.</li>
-                <li>The "Fusion Recipe": Combine ingredients found at <strong>Paris Creperie</strong> and <strong>Mike's Deli</strong> into a new home-cooked dish.</li>
-                <li>Make a <strong>three-story human pyramid</strong> in front of a town building.</li>
+                <li><strong>Flag Design</strong> for Brookline.</li>
+                <li><strong>Food Model</strong> of Brookline architecture.</li>
+                <li>1-minute <strong>choreographed/stop-motion</strong> video.</li>
+                <li><strong>Fusion Recipe</strong>: Paris Creperie + Mike's Deli.</li>
+                <li><strong>3-story human pyramid</strong> at a town building.</li>
             </ul>
         </div>
+
     </div>
 
     <section class="leaderboard">
         <h2>🏆 The Hall of Fame</h2>
-        <p>These intrepid explorers have defeated joylessness and claimed their tokens:</p>
         <ul style="list-style: none; padding: 0; font-weight: bold;">
             <li>✨ Your Name Could Be Here! ✨</li>
-            </ul>
+        </ul>
     </section>
 
 </div>
 
 <footer>
-    <p>Created with ❤️ for the Brookline Community.</p>
-    <p>Questions? <a href="mailto:nsmader@gmail.com">Contact Nick Mader</a></p>
+    <p>Created for the Brookline Community | Questions? <a href="mailto:nsmader@gmail.com">Email Nick</a></p>
 </footer>
 
 </body>
